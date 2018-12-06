@@ -1,0 +1,150 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.cicil</groupId>
+  <artifactId>automatelibrary</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>automatelibrary</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+	
+<!-- add this to able to use testinium -->	
+<!-- https://sdetblog.wordpress.com/2018/05/02/manage-your-appium-desired-capabilities-dynamically/ -->
+<repositories>
+	<repository>
+		<id>public</id>
+		<name>public</name>
+		<url>http://mvn.testinium.com/repository/public/</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+		<enabled>true</enabled>
+		</snapshots>
+	</repository>
+	<!-- <repository>
+		<id>public2</id>
+		<name>public</name>
+		<url>http://repo.spring.io/plugins-release/</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+		<enabled>true</enabled>
+		</snapshots>
+	</repository>
+	<repository>
+		<id>public3</id>
+		<name>public</name>
+		<url>http://repo.experitest.com:8010/Maven2/</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+		<enabled>true</enabled>
+		</snapshots>
+	</repository>
+	<repository>
+         <releases>
+             <enabled>true</enabled>
+             <updatePolicy>always</updatePolicy>
+             <checksumPolicy>fail</checksumPolicy>
+         </releases>
+         <id>Experitest.repo1</id>
+         <name>YourName</name>
+         <url>https://cloud.experitest.com/repo/</url>
+         <layout>default</layout>
+     </repository> -->
+</repositories>	
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/com.google.zxing/javase -->
+	<dependency>
+	    <groupId>com.google.zxing</groupId>
+	    <artifactId>javase</artifactId>
+	    <version>3.3.3</version>
+	</dependency>
+
+
+	<dependency>
+		<groupId>com.testinium.deviceinformation</groupId>
+		<artifactId>device-information</artifactId>
+		<version>1.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+<dependency>
+    <groupId>commons-codec</groupId>
+    <artifactId>commons-codec</artifactId>
+    <version>1.9</version>
+</dependency>
+	
+	
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server-standalone -->
+<!-- <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server-standalone</artifactId>
+    <version>2.53.0</version>
+</dependency> -->
+
+<!-- <dependency>
+    <groupId>com.experitest</groupId>
+    <artifactId>appium-seetest-extension</artifactId>
+    <version>11.4</version>
+</dependency>
+
+<dependency>
+    <groupId>com.experitest</groupId>
+    <artifactId>appium</artifactId>
+    <version>4.1.2</version>
+</dependency> -->
+
+<!-- <dependency>
+    <groupId>io.appium</groupId>
+    <artifactId>java-client</artifactId>
+    <version>6.1.0</version>
+</dependency> -->
+
+<!-- buat mocking android code.. jadinya lib2 di android.jar bisa jalan -->
+<!-- https://mvnrepository.com/artifact/org.robolectric/robolectric -->
+<!--<dependency>
+    <groupId>org.robolectric</groupId>
+    <artifactId>robolectric</artifactId>
+    <version>4.0.2</version>
+    <scope>test</scope>
+</dependency> -->
+
+
+<!-- https://mvnrepository.com/artifact/com.google.android/android -->
+<!-- ini buat semua di package com.tomgibara.android.camera nya -->
+<!-- <dependency>
+    <groupId>com.google.android</groupId>
+    <artifactId>android</artifactId>
+    <version>4.1.1.4</version>
+    <scope>provided</scope>
+</dependency> -->
+	
+  </dependencies>
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-shade-plugin</artifactId>
+  			<version>2.3</version>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>
